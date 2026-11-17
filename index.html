@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Plano de Carreira · Proposta para o lotobanca</title>
+<meta name="description" content="Proposta de Plano de Carreira para vendedores do lotobanca: pontos, níveis, prêmios, metas diárias, sequência e ranking — personalizável por banca.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c3aed'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
+:root{
+  --ink:#0f172a;--ink-2:#334155;--muted:#64748b;--line:#e2e8f0;
+  --bg:#f7f7fb;--card:#ffffff;
+  --purple:#7c3aed;--purple-dark:#5b21b6;--purple-2:#a78bfa;--purple-soft:#f3e8ff;--purple-ink:#4c1d95;
+  --green:#16a34a;--green-soft:#dcfce7;--green-ink:#14532d;
+  --gold:#f59e0b;--gold-soft:#fef3c7;--gold-ink:#78350f;
+  --red:#e11d48;--red-soft:#ffe4e6;
+  --dark:#0b1020;--dark-2:#141a33;
+  --radius:20px;--shadow:0 24px 60px -30px rgba(15,23,42,.35);
+  --font-head:'Sora',ui-sans-serif,system-ui,sans-serif;
+}
+img,svg{display:block}
+a{color:inherit}
+button,input,textarea{font:inherit}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;letter-spacing:-.025em;margin:0;color:var(--ink)}
+p{margin:0}
+.container{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.ic{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.section{padding:clamp(64px,8vw,104px) 0}
+.section.tint{background:linear-gradient(180deg,#f2edff 0%,#f7f7fb 100%)}
+.section-head{max-width:780px;margin:0 auto 48px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--purple);margin-bottom:14px}
+.eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--purple)}
+.section-head h2{font-size:clamp(28px,3.6vw,42px)}
+.lead{font-size:clamp(16px,1.4vw,18px);color:var(--muted);margin-top:16px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 1px 0 rgba(15,23,42,.02);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#d8d2ee}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.5px}
+.icon-tile{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--purple-soft);color:var(--purple);margin-bottom:18px}
+.icon-tile.green{background:var(--green-soft);color:var(--green)}
+.icon-tile.gold{background:var(--gold-soft);color:#b45309}
+.icon-tile.red{background:var(--red-soft);color:var(--red)}
+.icon-tile.dark{background:#e8eaf3;color:var(--ink)}
+.chip{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:7px 12px;font-size:12.5px;font-weight:700;background:var(--purple-soft);color:var(--purple-ink)}
+.chip.green{background:var(--green-soft);color:var(--green-ink)}
+.chip.gold{background:var(--gold-soft);color:var(--gold-ink)}
+.chip.red{background:var(--red-soft);color:#9f1239}
+.chip.neutral{background:#eef2f7;color:var(--ink-2)}
+.note{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:16px}
+.note .ic{width:18px;height:18px;color:var(--purple);margin-top:1px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 22px;font-weight:700;font-size:14.5px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 14px 30px -14px rgba(124,58,237,.65)}
+.btn-primary:hover{background:var(--purple-dark)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-light{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-light:hover{border-color:#cbd5e1}
+.btn .ic{width:18px;height:18px}
+.bullets{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.bullets li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink-2)}
+.bullets .ic{width:20px;height:20px;color:var(--green);margin-top:1px}
+/* ============ OBSERVAÇÃO POR ÁREA ============ */
+.obs{margin-top:34px;border:1px dashed #d8d2ee;background:rgba(255,255,255,.72);border-radius:16px;padding:16px 18px;transition:border-color .2s,background .2s,box-shadow .2s}
+.obs:focus-within{border-color:var(--purple-2);background:#fff;box-shadow:0 0 0 4px rgba(124,58,237,.07)}
+.obs-head{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:800;color:var(--ink-2);cursor:pointer}
+.obs-head .ic{width:17px;height:17px;color:var(--purple)}
+.obs-head span{margin-left:auto;font-size:10.5px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+.obs-input{margin-top:10px;width:100%;min-height:64px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:13px;color:var(--ink);background:#fff;outline:none;transition:border .2s,box-shadow .2s;line-height:1.5}
+.obs-input::placeholder{color:#9aa6b8}
+.obs-input:focus{border-color:var(--purple-2);box-shadow:0 0 0 4px rgba(124,58,237,.08)}
+.obs.saved .obs-head::after{content:"salvo";font-size:10px;font-weight:800;color:var(--green);margin-left:8px;text-transform:uppercase;letter-spacing:.08em}
+/* ============ NAV ============ */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(11,16,32,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);transition:background .3s ease,box-shadow .3s ease}
+.nav.scrolled{background:rgba(9,13,26,.92);box-shadow:0 10px 30px -18px rgba(0,0,0,.6)}
+.nav-inner{display:flex;align-items:center;gap:22px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:none}
+.brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);display:grid;place-items:center;color:#fff;font-family:var(--font-head);font-weight:800;font-size:19px;box-shadow:0 8px 20px -8px rgba(124,58,237,.8)}
+.brand-name{font-family:var(--font-head);font-weight:700;font-size:19px;color:#fff;letter-spacing:-.02em}
+.brand-name small{display:block;font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#a5b4fc;margin-top:1px}
+.nav-links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:#c7d2fe;text-decoration:none;font-size:13.5px;font-weight:600;padding:9px 12px;border-radius:9px;white-space:nowrap;transition:background .2s,color .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-cta{flex:none;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);border-radius:999px;padding:10px 16px;font-size:13px;font-weight:800;text-decoration:none;transition:transform .2s}
+.nav-cta:hover{transform:translateY(-1px)}
+.nav-cta .ic{width:16px;height:16px;color:var(--purple)}
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;background:var(--dark);color:#fff;padding:132px 0 92px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(720px 420px at 78% 8%,rgba(124,58,237,.38),transparent 60%),
+  radial-gradient(520px 380px at 8% 80%,rgba(245,158,11,.12),transparent 60%),
+  radial-gradient(420px 300px at 55% 100%,rgba(22,163,74,.10),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(900px 520px at 60% 20%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(900px 520px at 60% 20%,#000 30%,transparent 75%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(167,139,250,.42);background:rgba(124,58,237,.16);color:#ddd6fe;border-radius:999px;padding:8px 14px;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.18)}
+.hero h1{color:#fff;font-size:clamp(36px,4.8vw,60px);line-height:1.06;margin:22px 0 20px;letter-spacing:-.035em}
+.hero h1 .grad{background:linear-gradient(100deg,#c4b5fd,#f0abfc 45%,#fcd34d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-lead{font-size:clamp(16px,1.5vw,18.5px);color:#c7d2fe;max-width:58ch}
+.hero-lead strong{color:#fff}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-note{display:flex;gap:9px;align-items:center;margin-top:22px;font-size:12.5px;color:#94a3b8}
+.hero-note .ic{width:16px;height:16px;color:#a5b4fc}
+/* hero visual */
+.hero-visual{position:relative;min-height:520px}
+.hv-main{position:relative;max-width:410px;margin:0 auto;background:linear-gradient(165deg,rgba(30,27,75,.92),rgba(15,23,42,.96));border:1px solid rgba(167,139,250,.30);border-radius:26px;padding:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.08)}
+.hv-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.hv-label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#a5b4fc}
+.hv-badge{font-size:10.5px;font-weight:800;color:#ddd6fe;background:rgba(124,58,237,.28);border:1px solid rgba(167,139,250,.3);padding:5px 9px;border-radius:999px}
+.hv-points{font-family:var(--font-head);font-size:46px;font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff;background:linear-gradient(110deg,#fff 30%,#c4b5fd 70%,#f0abfc);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hv-points span{font-size:15px;font-weight:700;color:#a5b4fc;-webkit-text-fill-color:#a5b4fc;margin-left:4px}
+.hv-next{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:12.5px;color:#a5b4fc}
+.hv-next strong{color:#fff}
+.hv-track{height:8px;border-radius:99px;background:rgba(148,163,184,.18);overflow:hidden;margin-top:8px;position:relative}
+.hv-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#22c55e,#4ade80);box-shadow:0 0 18px rgba(74,222,128,.55)}
+.hv-levels{display:grid;gap:9px;margin-top:20px}
+.hv-level{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06)}
+.hv-node{width:10px;height:10px;border-radius:50%;flex:none}
+.hv-level small{color:#94a3b8;font-size:10.5px;display:block;line-height:1.2}
+.hv-level b{color:#e2e8f0;font-size:12px;font-weight:700}
+.hv-level .hv-prize{margin-left:auto;font-size:10px;font-weight:800;color:#fcd34d;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.22);padding:4px 8px;border-radius:999px;white-space:nowrap}
+.hv-float{position:absolute;background:rgba(17,24,39,.94);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:11px;box-shadow:0 24px 50px -22px rgba(0,0,0,.85);backdrop-filter:blur(8px)}
+.hv-float small{display:block;font-size:10px;color:#94a3b8;line-height:1.2}
+.hv-float b{font-size:13px;color:#fff;font-weight:800}
+.hv-float .f-icon{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;flex:none}
+.hv-float .ic{width:19px;height:19px}
+.hv-prize-card{top:34px;right:-4px;animation:float1 6s ease-in-out infinite}
+.hv-prize-card .f-icon{background:rgba(245,158,11,.16);color:#fbbf24}
+.hv-streak-card{bottom:96px;left:-10px;animation:float2 7s ease-in-out infinite}
+.hv-streak-card .f-icon{background:rgba(225,29,72,.16);color:#fb7185}
+.hv-rank-card{bottom:18px;right:8px;animation:float1 8s ease-in-out infinite}
+.hv-rank-card .f-icon{background:rgba(22,163,74,.16);color:#4ade80}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+/* ============ STRIP ============ */
+.strip{position:relative;z-index:3;margin-top:-32px}
+.strip-inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.strip-item{display:flex;align-items:center;gap:11px;padding:18px 20px;border-right:1px solid var(--line);font-size:13px;font-weight:700;color:var(--ink-2)}
+.strip-item:last-child{border-right:0}
+.strip-item .ic{width:20px;height:20px;color:var(--purple)}
+/* ============ MOTORES ============ */
+.pillar{display:flex;flex-direction:column;gap:18px}
+.pillar-visual{border-radius:16px;padding:18px;background:#fbfaff;border:1px solid var(--line);min-height:132px;display:flex;align-items:center;justify-content:center}
+.pv-ladder{width:100%;display:flex;align-items:flex-end;gap:12px;height:92px}
+.pv-ladder span{flex:1;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,#a78bfa,#7c3aed);opacity:.9}
+.pv-ladder span:nth-child(1){height:34%}
+.pv-ladder span:nth-child(2){height:52%}
+.pv-ladder span:nth-child(3){height:72%}
+.pv-ladder span:nth-child(4){height:96%}
+.pv-days{width:100%;display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.pv-day{aspect-ratio:1;border-radius:9px;background:#eef2f7;display:grid;place-items:center;color:#cbd5e1;font-size:11px;font-weight:800}
+.pv-day.on{background:var(--green-soft);color:var(--green)}
+.pv-day.on .ic{width:14px;height:14px}
+.pv-podium{width:100%;display:flex;align-items:flex-end;justify-content:center;gap:10px;height:96px}
+.pv-podium div{width:52px;border-radius:9px 9px 4px 4px;display:flex;align-items:flex-start;justify-content:center;padding-top:7px;font-size:12px;font-weight:800;color:#fff}
+.pv-podium .p2{height:58%;background:#94a3b8}
+.pv-podium .p1{height:96%;background:linear-gradient(180deg,#fcd34d,#f59e0b)}
+.pv-podium .p3{height:42%;background:#fb923c}
+/* ============ PONTOS ============ */
+.split{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:start}
+.example-list{display:grid;gap:12px;margin-top:26px}
+.example{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 17px}
+.example .e-ticket{min-width:44px;height:44px;padding:0 9px;border-radius:12px;background:var(--purple-soft);color:var(--purple-ink);display:grid;place-items:center;font-size:11.5px;font-weight:800;flex:none;white-space:nowrap}
+.example .e-label{font-size:13.5px;color:var(--muted)}
+.example b{font-size:14.5px;color:var(--ink)}
+.example .e-eq{margin-left:auto;font-family:var(--font-head);font-weight:800;font-size:18px;color:var(--purple);white-space:nowrap}
+.rules-mini{display:grid;gap:10px;margin-top:26px;padding:20px;background:#fbfaff;border:1px solid var(--line);border-radius:16px}
+.rules-mini li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink-2);list-style:none}
+.rules-mini ul{margin:0;padding:0;display:grid;gap:10px}
+.rules-mini .ic{width:18px;height:18px;color:var(--green);margin-top:1px}
+.sim{background:linear-gradient(165deg,#141a33,#0b1020);border:1px solid rgba(167,139,250,.28);border-radius:22px;padding:28px;color:#fff;box-shadow:0 30px 70px -40px rgba(2,6,23,.9)}
+.sim h3{color:#fff;font-size:19px;display:flex;align-items:center;gap:10px}
+.sim h3 .ic{color:#c4b5fd}
+.sim p.sim-sub{color:#a5b4fc;font-size:13px;margin-top:6px}
+.sim-field{margin-top:22px}
+.sim-field label{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:#c7d2fe;font-weight:600}
+.sim-field output{font-family:var(--font-head);font-size:18px;color:#fff;font-weight:800}
+.sim input[type=range]{width:100%;margin-top:14px;-webkit-appearance:none;appearance:none;height:8px;border-radius:99px;background:linear-gradient(90deg,#7c3aed,#a78bfa);outline:none}
+.sim input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:4px solid #7c3aed;cursor:pointer;box-shadow:0 0 0 6px rgba(124,58,237,.18)}
+.sim input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#fff;border:4px solid #7c3aed;cursor:pointer}
+.sim-results{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.sim-result{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:14px}
+.sim-result small{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:#94a3b8;font-weight:800}
+.sim-result b{display:block;font-family:var(--font-head);font-size:20px;margin-top:4px;color:#fff}
+.sim-result.green b{color:#4ade80}
+.sim-result.gold b{color:#fbbf24}
+.sim-foot{margin-top:16px;font-size:11.5px;color:#94a3b8;display:flex;gap:7px;align-items:flex-start}
+.sim-foot .ic{width:15px;height:15px;color:#a5b4fc;margin-top:1px}
+/* ============ ESCADA ============ */
+.ladder{display:grid;gap:10px}
+.rung{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;position:relative}
+.rung .r-node{width:16px;height:16px;border-radius:50%;flex:none;border:4px solid #fff;box-shadow:0 0 0 2px currentColor}
+.rung .r-main{min-width:0}
+.rung h4{font-size:15px;margin:0}
+.rung small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.rung .r-prize{margin-left:auto;text-align:right;flex:none}
+.rung .r-prize b{font-size:13px;color:var(--ink)}
+.rung .r-prize small{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.rung.you{border-color:#a78bfa;background:linear-gradient(100deg,#faf5ff,#fff);box-shadow:0 14px 34px -22px rgba(124,58,237,.55)}
+.rung .you-tag{position:absolute;right:16px;top:-11px;background:var(--purple);color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;box-shadow:0 6px 14px -6px rgba(124,58,237,.8)}
+.ladder-progress{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.lp-top{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.lp-top strong{color:var(--ink)}
+.lp-track{height:9px;background:#eef2f7;border-radius:99px;overflow:hidden}
+.lp-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#7c3aed,#a78bfa)}
+.level-cards{display:grid;gap:12px;margin-top:24px}
+.level-card{display:flex;align-items:center;gap:14px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.level-card .lv-badge{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff;flex:none}
+.level-card b{display:block;font-size:14px}
+.level-card small{color:var(--muted);font-size:12px}
+.level-card .lv-pts{margin-left:auto;font-weight:800;color:var(--purple);font-size:13.5px;white-space:nowrap}
+/* ============ METAS ============ */
+.calendar-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.cal-head h4{font-size:15px}
+.cal-head span{font-size:12px;color:var(--muted)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.cal-day{aspect-ratio:1;border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:#f1f5f9;color:#94a3b8;font-size:10.5px;font-weight:700}
+.cal-day .ic{width:15px;height:15px}
+.cal-day.on{background:var(--green-soft);color:var(--green);}
+.cal-day.today{outline:2px solid #7c3aed;outline-offset:2px}
+.milestones{display:grid;gap:10px;margin-top:18px}
+.milestone{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:13px;background:#fbfaff;border:1px solid var(--line)}
+.milestone .m-days{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);color:var(--gold-ink);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none;font-family:var(--font-head)}
+.milestone b{display:block;font-size:13.5px}
+.milestone small{color:var(--muted);font-size:11.5px}
+.milestone .m-value{margin-left:auto;font-family:var(--font-head);font-weight:800;color:var(--green);font-size:18px;white-space:nowrap}
+.wallet-float{display:inline-flex;align-items:center;gap:10px;background:var(--green-soft);color:var(--green-ink);border:1px solid #bbf7d0;border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:800;margin-top:18px}
+.wallet-float .ic{width:17px;height:17px}
+/* ============ RANKING ============ */
+.rank-visual{background:linear-gradient(165deg,#151204,#0b0804);border-radius:22px;padding:28px 24px;border:1px solid rgba(251,191,36,.22);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)}
+.podium{display:flex;align-items:flex-end;justify-content:center;gap:12px;min-height:210px}
+.pod-card{width:31%;border-radius:14px;padding:14px 10px;text-align:center;border:2px solid;position:relative}
+.pod-card .pod-pos{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.pod-card .pod-avatar{width:42px;height:42px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:15px;color:#fff}
+.pod-card b{display:block;font-size:11.5px;color:#fff;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pod-card small{font-size:9.5px;color:#d1d5db}
+.pod-1{border-color:#fbbf24;background:linear-gradient(180deg,rgba(251,191,36,.16),rgba(20,17,11,.9));align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end}
+.pod-1 .pod-avatar{background:linear-gradient(135deg,#fbbf24,#b45309)}
+.pod-2{border-color:#38bdf8;background:linear-gradient(180deg,rgba(56,189,248,.14),rgba(20,17,11,.9));padding-bottom:26px}
+.pod-2 .pod-avatar{background:linear-gradient(135deg,#38bdf8,#0369a1)}
+.pod-3{border-color:#f97316;background:linear-gradient(180deg,rgba(249,115,22,.13),rgba(20,17,11,.9));padding-bottom:18px}
+.pod-3 .pod-avatar{background:linear-gradient(135deg,#fb923c,#9a3412)}
+.rank-cats{display:grid;gap:10px;margin-top:26px}
+.rank-cat{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:13px;background:#fff;border:1px solid var(--line)}
+.rank-cat .rc-icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:none;background:var(--gold-soft);color:#b45309}
+.rank-cat .rc-icon.blue{background:#e0f2fe;color:#0369a1}
+.rank-cat .rc-icon.red{background:var(--red-soft);color:var(--red)}
+.rank-cat b{display:block;font-size:13.5px}
+.rank-cat small{color:var(--muted);font-size:11.5px}
+/* ============ COMO SERIA ============ */
+.personas{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.persona{border-radius:22px;padding:30px;border:1px solid var(--line);background:#fff}
+.persona.seller{background:linear-gradient(170deg,#faf5ff,#fff 60%)}
+.persona.banca{background:linear-gradient(170deg,#f0fdf4,#fff 60%)}
+.persona .p-tag{margin-bottom:14px}
+.persona h3{font-size:22px;margin-bottom:12px}
+.persona ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.persona li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+.persona li .ic{width:19px;height:19px;color:var(--purple);margin-top:2px}
+.persona.banca li .ic{color:var(--green)}
+.screens{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.phone{background:#0b1020;border-radius:26px;padding:9px;box-shadow:0 30px 60px -35px rgba(2,6,23,.8);border:1px solid #1e293b}
+.phone-screen{border-radius:19px;padding:16px 13px;min-height:300px;color:#fff;overflow:hidden;position:relative}
+.phone-screen.career{background:linear-gradient(170deg,#1e1b4b,#0f172a)}
+.phone-screen.meta{background:linear-gradient(170deg,#2a0f1a,#12101a)}
+.phone-screen.rank{background:linear-gradient(170deg,#1a1305,#0b0804)}
+.ps-top{display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#94a3b8;letter-spacing:.08em;text-transform:uppercase;font-weight:800}
+.ps-title{font-family:var(--font-head);font-size:15px;font-weight:800;margin-top:12px;color:#fff}
+.ps-sub{font-size:10px;color:#94a3b8;margin-top:3px}
+.ps-points{font-family:var(--font-head);font-size:27px;font-weight:800;margin-top:12px;line-height:1;background:linear-gradient(110deg,#fff,#c4b5fd);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ps-points span{font-size:10px;-webkit-text-fill-color:#a5b4fc;color:#a5b4fc}
+.ps-bar{height:6px;border-radius:99px;background:rgba(148,163,184,.2);margin-top:10px;overflow:hidden}
+.ps-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#22c55e,#4ade80)}
+.ps-line{display:flex;justify-content:space-between;font-size:9.5px;color:#94a3b8;margin-top:6px}
+.ps-line b{color:#e2e8f0}
+.ps-levels{display:grid;gap:7px;margin-top:14px}
+.ps-level{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:7px 8px;font-size:9.5px;color:#cbd5e1}
+.ps-level i{width:7px;height:7px;border-radius:50%;flex:none}
+.ps-level em{margin-left:auto;font-style:normal;color:#fcd34d;font-size:8.5px;font-weight:800}
+.ps-flame{display:flex;align-items:center;gap:10px;margin-top:14px}
+.ps-flame .f-circle{width:38px;height:38px;border-radius:12px;background:rgba(225,29,72,.16);display:grid;place-items:center;color:#fb7185;flex:none}
+.ps-flame b{display:block;font-size:14px;font-family:var(--font-head);color:#fff}
+.ps-flame small{font-size:9px;color:#94a3b8}
+.ps-goal{margin-top:13px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:10px}
+.ps-goal .g-top{display:flex;justify-content:space-between;font-size:9.5px;color:#cbd5e1}
+.ps-goal .g-top b{color:#4ade80}
+.ps-goal .ps-bar{margin-top:8px}
+.ps-rewards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px}
+.ps-reward{border-radius:8px;padding:7px 4px;text-align:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+.ps-reward b{display:block;font-size:10px;color:#fff}
+.ps-reward small{font-size:8px;color:#94a3b8}
+.ps-reward.on{background:rgba(225,29,72,.16);border-color:rgba(251,113,133,.35)}
+.ps-podium{display:flex;align-items:flex-end;gap:7px;margin-top:16px;justify-content:center;min-height:120px}
+.ps-pod{width:31%;border-radius:9px 9px 5px 5px;padding:8px 4px;text-align:center;font-size:8.5px;color:#fff;border:1px solid rgba(255,255,255,.15)}
+.ps-pod b{display:block;font-size:9.5px}
+.ps-pod.first{height:92px;background:linear-gradient(180deg,rgba(251,191,36,.35),rgba(120,53,15,.5));border-color:#fbbf24}
+.ps-pod.second{height:70px;background:linear-gradient(180deg,rgba(56,189,248,.3),rgba(12,74,110,.5));border-color:#38bdf8}
+.ps-pod.third{height:55px;background:linear-gradient(180deg,rgba(249,115,22,.3),rgba(124,45,18,.5));border-color:#f97316}
+.ps-tabs{display:flex;gap:4px;margin-top:12px}
+.ps-tab{flex:1;text-align:center;font-size:8px;font-weight:800;padding:6px 2px;border-radius:6px;background:rgba(255,255,255,.05);color:#cbd5e1}
+.ps-tab.on{background:linear-gradient(135deg,#ed334f,#ff633d);color:#fff}
+/* painel da banca mock */
+.panel-mock{grid-column:1 / -1;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.pm-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.pm-dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(22,163,74,.14)}
+.pm-top b{font-family:var(--font-head);font-size:16px}
+.pm-top span{font-size:12px;color:var(--muted)}
+.pm-top .chip{margin-left:auto}
+.pm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pm-stat{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fbfbfd}
+.pm-stat small{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800}
+.pm-stat b{display:block;font-family:var(--font-head);font-size:20px;margin-top:5px}
+.pm-stat b.purple{color:var(--purple)}
+.pm-stat b.green{color:var(--green)}
+.pm-stat b.gold{color:#b45309}
+.pm-levels{margin-top:16px;display:grid;gap:8px}
+.pm-level{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:#fbfbfd;border:1px solid var(--line);font-size:12px;color:var(--ink-2)}
+.pm-level i{width:9px;height:9px;border-radius:50%;flex:none}
+.pm-level b{font-size:12px}
+.pm-level span{margin-left:auto;color:var(--muted);font-size:11px}
+.pm-level em{font-style:normal;font-weight:800;color:var(--ink);font-size:12px}
+/* ============ PERSONALIZAÇÃO ============ */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.plan-card{border-radius:22px;border:1px solid var(--line);padding:28px;background:#fff;position:relative;overflow:hidden}
+.plan-card::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,#7c3aed,#a78bfa)}
+.plan-card.constancia::before{background:linear-gradient(180deg,#16a34a,#4ade80)}
+.plan-card .plan-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px}
+.plan-card h3{font-size:21px}
+.plan-card .plan-desc{font-size:13.5px;color:var(--muted);margin-top:5px}
+.plan-tag{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:6px 10px;border-radius:999px;white-space:nowrap}
+.plan-tag.purple{background:var(--purple-soft);color:var(--purple-ink)}
+.plan-tag.green{background:var(--green-soft);color:var(--green-ink)}
+.plan-rows{display:grid;gap:8px}
+.plan-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:11px;background:#fbfbfd;border:1px solid var(--line);font-size:12.5px}
+.plan-row i{width:8px;height:8px;border-radius:50%;flex:none}
+.plan-row b{font-size:12.5px}
+.plan-row span{margin-left:auto;color:var(--muted);white-space:nowrap;font-size:11.5px}
+.plan-row strong{color:var(--ink);font-size:12px}
+.plan-foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.setup{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;position:relative}
+.step .s-num{width:34px;height:34px;border-radius:10px;background:var(--purple-soft);color:var(--purple);display:grid;place-items:center;font-weight:800;font-family:var(--font-head);font-size:14px;margin-bottom:14px}
+.step h4{font-size:15px;margin-bottom:6px}
+.step p{font-size:12.5px;color:var(--muted)}
+.step::after{content:"";position:absolute;top:36px;right:-10px;width:20px;border-top:2px dashed #d8d2ee}
+.step:last-child::after{display:none}
+/* ============ JORNADA ============ */
+.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:36px;counter-reset:j}
+.jstep{position:relative;padding-top:46px;counter-increment:j}
+.jstep::before{content:counter(j);position:absolute;top:0;left:0;width:36px;height:36px;border-radius:50%;background:var(--purple);color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:14px;box-shadow:0 10px 22px -10px rgba(124,58,237,.7);z-index:2}
+.jstep::after{content:"";position:absolute;top:18px;left:36px;right:-14px;border-top:2px dashed #d8d2ee;z-index:1}
+.jstep:last-child::after{display:none}
+.jstep b{display:block;font-size:13.5px;margin-bottom:5px;color:var(--ink)}
+.jstep p{font-size:12px;color:var(--muted)}
+/* ============ REGRAS ============ */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+.rule{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 18px}
+.rule .r-ic{width:34px;height:34px;border-radius:10px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;flex:none}
+.rule b{display:block;font-size:13.5px;margin-bottom:3px}
+.rule p{font-size:12.5px;color:var(--muted)}
+/* ============ VALIDAÇÃO ============ */
+.validation-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,38px);box-shadow:var(--shadow);max-width:900px;margin:34px auto 0}
+.check{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed #e5e7ef;cursor:pointer}
+.check:last-of-type{border-bottom:0}
+.check input{position:absolute;opacity:0;pointer-events:none}
+.check .box{width:24px;height:24px;border-radius:7px;border:2px solid #cbd5e1;background:#fff;flex:none;display:grid;place-items:center;color:#fff;transition:all .18s ease;margin-top:1px}
+.check .box .ic{width:14px;height:14px;opacity:0;transform:scale(.5);transition:all .18s ease}
+.check input:checked + .box{background:var(--purple);border-color:var(--purple);box-shadow:0 6px 14px -6px rgba(124,58,237,.7)}
+.check input:checked + .box .ic{opacity:1;transform:scale(1)}
+.check input:focus-visible + .box{outline:3px solid rgba(124,58,237,.28);outline-offset:2px}
+.check .c-text b{display:block;font-size:14px;color:var(--ink);margin-bottom:2px}
+.check .c-text small{font-size:12.5px;color:var(--muted);display:block;line-height:1.5}
+.comments-block{margin-top:8px}
+.comments-block label{display:block;font-size:13px;font-weight:700;margin-bottom:8px}
+.comments-block textarea{width:100%;min-height:96px;resize:vertical;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:13.5px;color:var(--ink);background:#fbfbfd;outline:none;transition:border .2s,box-shadow .2s;line-height:1.5}
+.comments-block textarea:focus{border-color:var(--purple-2);box-shadow:0 0 0 4px rgba(124,58,237,.10)}
+.copy-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+.copy-status{font-size:12.5px;color:var(--green);font-weight:700;display:none;align-items:center;gap:6px}
+.copy-status.show{display:inline-flex}
+.copy-status .ic{width:16px;height:16px}
+.validation-note{max-width:900px;margin:18px auto 0;text-align:center;font-size:12.5px;color:var(--muted)}
+/* ============ PRÓXIMOS ============ */
+.next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+.next-card{background:linear-gradient(170deg,#fff,#fbfaff);border:1px solid var(--line);border-radius:20px;padding:28px;position:relative}
+.next-card .n-big{font-family:var(--font-head);font-size:44px;font-weight:800;color:#e9e4ff;line-height:1;margin-bottom:12px}
+.next-card h3{font-size:17px;margin-bottom:8px}
+.next-card p{font-size:13.5px;color:var(--muted)}
+/* ============ FOOTER ============ */
+.footer{background:var(--dark);color:#94a3b8;padding:54px 0 34px}
+.footer-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.footer .brand-name{color:#fff}
+.footer p{font-size:13px;max-width:52ch;margin-top:14px;line-height:1.65}
+.footer-right{font-size:12px;text-align:right}
+.footer-right b{display:block;color:#e2e8f0;font-size:13px;margin-bottom:4px}
+.footer-bottom{margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:11.5px;color:#64748b}
+.footer a{color:#c7d2fe;text-decoration:none}
+/* ============ TOAST ============ */
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:#0f172a;color:#fff;padding:13px 20px;border-radius:12px;font-size:13px;font-weight:700;box-shadow:0 20px 50px -20px rgba(0,0,0,.7);opacity:0;pointer-events:none;transition:all .25s ease;z-index:100;display:flex;align-items:center;gap:9px}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast .ic{width:18px;height:18px;color:#4ade80}
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hv-prize-card,.hv-streak-card,.hv-rank-card{animation:none}
+  html{scroll-behavior:auto}
+}
+/* ============ RESPONSIVO ============ */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-visual{min-height:480px;max-width:520px;margin-inline:auto;width:100%}
+  .g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .split{grid-template-columns:1fr;gap:36px}
+  .journey{grid-template-columns:repeat(3,1fr);row-gap:30px}
+  .jstep:nth-child(3)::after{display:none}
+  .setup{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2)::after{display:none}
+  .pm-grid{grid-template-columns:repeat(2,1fr)}
+  .screens{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .nav-links{display:none}
+  .nav-cta{margin-left:auto}
+  .hero{padding-top:112px}
+  .hero-visual{min-height:430px}
+  .hv-float{padding:10px 12px}
+  .hv-prize-card{right:0;top:14px}
+  .hv-streak-card{left:0;bottom:64px}
+  .hv-rank-card{right:0;bottom:0}
+  .hv-points{font-size:38px}
+  .strip-inner{grid-template-columns:1fr 1fr}
+  .strip-item:nth-child(2){border-right:0}
+  .strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .g2,.g3,.g4,.personas,.plans,.rules,.next-grid{grid-template-columns:1fr}
+  .journey{grid-template-columns:1fr 1fr}
+  .jstep:nth-child(2n)::after{display:none}
+  .setup{grid-template-columns:1fr}
+  .step::after{display:none}
+  .screens{grid-template-columns:1fr;max-width:330px;margin-inline:auto}
+  .panel-mock{grid-column:auto}
+  .pm-grid{grid-template-columns:1fr 1fr}
+  .cal-grid{gap:6px}
+  .rung{gap:11px;padding:14px}
+  .rung .r-prize{min-width:88px}
+  .footer-right{text-align:left}
+  .container{width:calc(100% - 32px)}
+}
+@media (max-width:420px){
+  .strip-inner{grid-template-columns:1fr}
+  .strip-item{border-right:0;border-bottom:1px solid var(--line)}
+  .strip-item:last-child{border-bottom:0}
+  .hero-actions .btn{width:100%}
+  .journey{grid-template-columns:1fr}
+  .jstep::after{display:none}
+}
+/* ============ IMPRESSÃO ============ */
+@media print{
+  .nav,.hero-actions,.btn,.obs,.copy-row,.toast,.hv-float,.footer-bottom{display:none!important}
+  body{background:#fff}
+  .hero{padding:40px 0;background:#fff;color:#0f172a}
+  .hero::before,.hero::after{display:none}
+  .hero h1,.hero-lead,.hero-lead strong,.hero-note{color:#0f172a}
+  .hero h1 .grad{color:#5b21b6;-webkit-text-fill-color:#5b21b6}
+  .hero-eyebrow{background:#f3e8ff;color:#4c1d95;border-color:#ddd6fe}
+  .hv-main{background:#fafaff;border-color:#e2e8f0;box-shadow:none}
+  .hv-points,.hv-points span{color:#4c1d95;-webkit-text-fill-color:#4c1d95}
+  .hv-label,.hv-next,.hv-level small,.hv-level b{color:#334155}
+  .hv-level .hv-prize{color:#78350f}
+  .card,.plan-card,.validation-card,.panel-mock,.calendar-card{box-shadow:none}
+  .reveal{opacity:1;transform:none}
+  .section{padding:36px 0}
+  .section,.section.tint{background:#fff}
+  .sim{background:#f8fafc;color:#0f172a}
+  .sim h3,.sim p.sim-sub,.sim-field label,.sim-result b,.sim-result small{color:#0f172a}
+  .sim-result{background:#fff;border-color:#e2e8f0}
+}
+</style>
+</head>
+<body>
+
+<!-- ÍCONES -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 4H5a2 2 0 0 0 0 4h2M17 4h2a2 2 0 0 1 0 4h-2"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M3 8h18v4H3zM12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM16 13h2M2 7l3-3h12l3 3"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><path d="M8 15l-2 6 6-3 6 3-2-6"/><circle cx="12" cy="9" r="6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4zM9 12l2 2 4-4"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2zM19 15l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9L19 15z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M3 4h18v17H3zM16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M17 7h4v4"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><path d="M9 9h12v12H9zM5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4 4 5-8 5 8 4-4v10H3V8zM3 21h18"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 9 9 0 0 1-3.9-.9L3 21l1.9-5.6a8.4 8.4 0 0 1-.9-3.9A8.5 8.5 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></symbol>
+</svg>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="lotobanca — início">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">lotobanca<small>Plano de Carreira</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegação da proposta">
+      <a href="#conceito">O programa</a>
+      <a href="#motores">Como funciona</a>
+      <a href="#pontuacao">Pontuação</a>
+      <a href="#personalizacao">Por banca</a>
+      <a href="#validacao">Validar</a>
+    </nav>
+    <a class="nav-cta" href="#validacao">Avaliar proposta <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-eyebrow"><span class="dot"></span>Proposta de programa de reconhecimento</span>
+      <h1>Cada venda pode valer <span class="grad">muito mais do que uma comissão.</span></h1>
+      <p class="hero-lead">O <strong>Plano de Carreira do lotobanca</strong> transforma vendas em pontos, pontos em conquistas e conquistas em prêmios. E o melhor: <strong>cada banca cria o seu próprio plano</strong>, com as suas metas, os seus níveis e as suas premiações.</p>
+      <div class="hero-actions">
+        <a href="#conceito" class="btn btn-primary">Entender o programa <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#validacao" class="btn btn-ghost">Ver o que precisamos validar</a>
+      </div>
+      <div class="hero-note"><svg class="ic"><use href="#i-info"/></svg> Proposta para avaliação. Valores e regras mostrados aqui são exemplos.</div>
+    </div>
+
+    <div class="hero-visual" aria-label="Ilustração do painel do vendedor com pontos, nível e prêmios">
+      <div class="hv-main">
+        <div class="hv-top">
+          <span class="hv-label">Minha jornada</span>
+          <span class="hv-badge">Plano da banca</span>
+        </div>
+        <div class="hv-points">31.400 <span>pts</span></div>
+        <div class="hv-next"><span>Próxima etapa: <strong>Ouro</strong></span><span><strong>78%</strong></span></div>
+        <div class="hv-track"><div class="hv-fill" style="width:78%"></div></div>
+        <div class="hv-levels">
+          <div class="hv-level">
+            <span class="hv-node" style="background:#a78bfa"></span>
+            <div><b>Bronze</b><small>5.000 pts</small></div>
+            <span class="hv-prize">R$ 100 na carteira</span>
+          </div>
+          <div class="hv-level">
+            <span class="hv-node" style="background:#38bdf8"></span>
+            <div><b>Prata</b><small>15.000 pts</small></div>
+            <span class="hv-prize">Relógio</span>
+          </div>
+          <div class="hv-level">
+            <span class="hv-node" style="background:#fbbf24"></span>
+            <div><b>Ouro</b><small>40.000 pts</small></div>
+            <span class="hv-prize">Celular</span>
+          </div>
+          <div class="hv-level">
+            <span class="hv-node" style="background:#22d3ee"></span>
+            <div><b>Diamante</b><small>100.000 pts</small></div>
+            <span class="hv-prize">Notebook</span>
+          </div>
+        </div>
+      </div>
+      <div class="hv-float hv-prize-card">
+        <span class="f-icon"><svg class="ic"><use href="#i-gift"/></svg></span>
+        <div><small>Próximo prêmio</small><b>Celular</b></div>
+      </div>
+      <div class="hv-float hv-streak-card">
+        <span class="f-icon"><svg class="ic"><use href="#i-flame"/></svg></span>
+        <div><small>Sequência</small><b>7 dias</b></div>
+      </div>
+      <div class="hv-float hv-rank-card">
+        <span class="f-icon"><svg class="ic"><use href="#i-trophy"/></svg></span>
+        <div><small>Ranking de hoje</small><b>3º lugar</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="container">
+    <div class="strip-inner">
+      <div class="strip-item"><svg class="ic"><use href="#i-bolt"/></svg> R$ 1 vendido = 1 ponto</div>
+      <div class="strip-item"><svg class="ic"><use href="#i-gift"/></svg> Prêmios cumulativos por nível</div>
+      <div class="strip-item"><svg class="ic"><use href="#i-wallet"/></svg> Bônus de sequência na carteira</div>
+      <div class="strip-item"><svg class="ic"><use href="#i-trophy"/></svg> Ranking diário de reconhecimento</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONCEITO -->
+<section class="section" id="conceito">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">O conceito</span>
+      <h2>Um programa simples, com três motivações claras.</h2>
+      <p class="lead">O Plano de Carreira reúne três mecanismos que se completam: a conquista de longo prazo, o hábito diário e o reconhecimento público. O vendedor sempre sabe onde está, o que conquistou e o que falta para o próximo prêmio.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card reveal">
+        <span class="icon-tile"><svg class="ic"><use href="#i-trophy"/></svg></span>
+        <h3>Carreira que cresce</h3>
+        <p>Cada venda vira ponto. Cada ponto aproxima o vendedor de um novo nível — e de um novo prêmio. A conquista é dele, para sempre.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile red"><svg class="ic"><use href="#i-flame"/></svg></span>
+        <h3>Hábito que vira bônus</h3>
+        <p>A meta diária cria ritmo. A sequência de dias premiada transforma constância em dinheiro na carteira, com marcos de 7, 15 e 30 dias.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile gold"><svg class="ic"><use href="#i-medal"/></svg></span>
+        <h3>Reconhecimento que motiva</h3>
+        <p>O ranking diário coloca os destaques em um pódio, gera conversa na equipe e produz cards de conquista para compartilhar.</p>
+      </article>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — conceito do programa</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Conceito do programa" placeholder="Quer ajustar ou comentar algo sobre o conceito? Escreva aqui para o nosso time de negócio e desenvolvimento."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="section tint" id="beneficios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que faz sentido</span>
+      <h2>Mais venda, mais constância, mais vendedor que fica.</h2>
+      <p class="lead">O plano não é um custo isolado: é uma alavanca de comportamento. Ele dá um motivo claro para o vendedor voltar todos os dias e crescer junto com a banca.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card reveal">
+        <span class="icon-tile green"><svg class="ic"><use href="#i-trend"/></svg></span>
+        <h3>Mais vendas no dia a dia</h3>
+        <p>Metas diárias criam um ritmo saudável de atividade, em vez de picos concentrados no fim do mês.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile"><svg class="ic"><use href="#i-users"/></svg></span>
+        <h3>Equipe mais engajada</h3>
+        <p>Quem vê a evolução e os prêmios tem mais motivo para permanecer e para vender com consistência.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile gold"><svg class="ic"><use href="#i-target"/></svg></span>
+        <h3>Previsibilidade para a banca</h3>
+        <p>A banca acompanha quem está perto da meta e quem está perto de conquistar um prêmio — e age no momento certo.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile"><svg class="ic"><use href="#i-spark"/></svg></span>
+        <h3>Diferencial para atrair vendedores</h3>
+        <p>Cada banca com o seu próprio plano é um argumento forte para atrair e manter bons vendedores.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile red"><svg class="ic"><use href="#i-medal"/></svg></span>
+        <h3>Reconhecimento que divulga</h3>
+        <p>Cards de conquista e pódios geram conteúdo espontâneo nas redes — marketing orgânico para a banca.</p>
+      </article>
+      <article class="card reveal">
+        <span class="icon-tile green"><svg class="ic"><use href="#i-wallet"/></svg></span>
+        <h3>Investimento sob controle</h3>
+        <p>A banca define os prêmios, os valores e o orçamento. A plataforma organiza, calcula e mostra o que foi conquistado.</p>
+      </article>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — benefícios para a banca</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Benefícios para a banca" placeholder="Algum benefício faz mais sentido para o seu negócio? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- MOTORES -->
+<section class="section" id="motores">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Três motores, uma jornada só.</h2>
+      <p class="lead">O vendedor não precisa aprender regras complicadas. Ele vê a evolução em três painéis simples — e entende na hora o que cada venda representa.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card pillar reveal">
+        <span class="icon-tile"><svg class="ic"><use href="#i-trophy"/></svg></span>
+        <div class="pillar-visual" aria-hidden="true">
+          <div class="pv-ladder"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div>
+          <h3>1. Carreira</h3>
+          <p>O vendedor acumula pontos a cada venda, sobe de nível e recebe o prêmio daquele nível. Os prêmios são cumulativos: quem chega ao Ouro leva também o Bronze e a Prata.</p>
+        </div>
+      </article>
+      <article class="card pillar reveal">
+        <span class="icon-tile red"><svg class="ic"><use href="#i-flame"/></svg></span>
+        <div class="pillar-visual" aria-hidden="true">
+          <div class="pv-days">
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+            <span class="pv-day on"><svg class="ic"><use href="#i-check"/></svg></span>
+          </div>
+        </div>
+        <div>
+          <h3>2. Meta e sequência</h3>
+          <p>A banca define uma meta diária. Ao bater, o dia entra na sequência. Ao manter 7, 15 ou 30 dias, o vendedor recebe um bônus direto na carteira.</p>
+        </div>
+      </article>
+      <article class="card pillar reveal">
+        <span class="icon-tile gold"><svg class="ic"><use href="#i-medal"/></svg></span>
+        <div class="pillar-visual" aria-hidden="true">
+          <div class="pv-podium"><div class="p2">2º</div><div class="p1">1º</div><div class="p3">3º</div></div>
+        </div>
+        <div>
+          <h3>3. Ranking</h3>
+          <p>Um ranking diário da equipe, com pódio e card de conquista. Reconhecimento imediato para quem se destaca — sem expor os valores de venda dos colegas.</p>
+        </div>
+      </article>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — os três motores</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Os três motores (carreira, meta e ranking)" placeholder="Quer priorizar um destes motores? Ou incluir outro? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- PONTUAÇÃO -->
+<section class="section tint" id="pontuacao">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Como contabiliza</span>
+        <h2 style="font-size:clamp(28px,3.4vw,40px)">A conta é simples: vendeu, pontuou.</h2>
+        <p class="lead">A regra de ouro é fácil de decorar — e cada banca pode ajustar a sua.</p>
+
+        <div class="example-list">
+          <div class="example">
+            <span class="e-ticket">R$ 10</span>
+            <div><span class="e-label">Um bilhete de</span><b> R$ 10,00</b></div>
+            <span class="e-eq">= 10 pontos</span>
+          </div>
+          <div class="example">
+            <span class="e-ticket">R$ 2,50</span>
+            <div><span class="e-label">Um bilhete de</span><b> R$ 2,50</b></div>
+            <span class="e-eq">= 2,5 pontos</span>
+          </div>
+          <div class="example">
+            <span class="e-ticket">R$ 150</span>
+            <div><span class="e-label">Um bilhete de</span><b> R$ 150,00</b></div>
+            <span class="e-eq">= 150 pontos</span>
+          </div>
+        </div>
+
+        <div class="rules-mini">
+          <ul>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Pontos se acumulam.</b> Não expiram durante o plano e ficam guardados na jornada do vendedor.</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>Só vendas confirmadas contam.</b> O que não foi efetivado não vira ponto.</span></li>
+            <li><svg class="ic"><use href="#i-check"/></svg><span><b>A banca escolhe a regra.</b> O padrão é R$ 1 = 1 ponto, mas a banca pode definir outro critério.</span></li>
+          </ul>
+        </div>
+        <div class="note"><svg class="ic"><use href="#i-info"/></svg><span>A pontuação é a mesma para todos os vendedores da banca — ou pode variar por equipe, se a banca quiser.</span></div>
+      </div>
+
+      <div class="sim reveal" aria-label="Simulador ilustrativo de pontos">
+        <h3><svg class="ic"><use href="#i-sliders"/></svg> Simule com o plano de exemplo</h3>
+        <p class="sim-sub">Arraste para ver quantos pontos um vendedor acumula por mês.</p>
+        <div class="sim-field">
+          <label for="sim-sales">Vendas do vendedor no mês <output id="sim-sales-out">R$ 20.000</output></label>
+          <input id="sim-sales" type="range" min="1000" max="100000" step="500" value="20000" aria-describedby="sim-hint">
+        </div>
+        <div class="sim-results">
+          <div class="sim-result"><small>Pontos no mês</small><b id="sim-points">20.000</b></div>
+          <div class="sim-result green"><small>Nível alcançado</small><b id="sim-level">Prata</b></div>
+        </div>
+        <div class="sim-results" style="grid-template-columns:1fr">
+          <div class="sim-result gold"><small>Próximo nível</small><b id="sim-next">Ouro · faltam 20.000 pts</b></div>
+        </div>
+        <p class="sim-foot" id="sim-hint"><svg class="ic"><use href="#i-info"/></svg><span>Simulação com o plano ilustrativo desta página (Bronze 5.000 · Prata 15.000 · Ouro 40.000 · Diamante 100.000 · Lenda 250.000). A banca define os números reais.</span></p>
+      </div>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — como os pontos são contados</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Como os pontos são contados" placeholder="A regra de R$ 1 = 1 ponto faz sentido? Quer considerar outro critério? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- ESCADA -->
+<section class="section" id="escada">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Exemplo de plano</span>
+        <h2 style="font-size:clamp(28px,3.4vw,40px)">A escada de níveis.</h2>
+        <p class="lead">A banca decide quantos níveis quer, os nomes, os pontos necessários e os prêmios. Quanto maior a conquista, mais valioso o prêmio.</p>
+        <div class="ladder-progress" style="margin-top:26px">
+          <div class="lp-top"><span>Jornada do vendedor</span><span><strong>31.400 pts</strong> · 78% para o Ouro</span></div>
+          <div class="lp-track"><div class="lp-fill" style="width:78%"></div></div>
+        </div>
+        <div class="note"><svg class="ic"><use href="#i-info"/></svg><span>Exemplo ilustrativo. A banca pode criar de 3 a 10 níveis, com os prêmios e valores que fizerem sentido para o seu negócio.</span></div>
+      </div>
+      <div class="reveal">
+        <div class="ladder">
+          <div class="rung">
+            <span class="r-node" style="color:#a78bfa"></span>
+            <div class="r-main"><h4>Bronze</h4><small>Ao alcançar 5.000 pontos</small></div>
+            <div class="r-prize"><small>Prêmio</small><b>R$ 100 na carteira</b></div>
+          </div>
+          <div class="rung">
+            <span class="r-node" style="color:#38bdf8"></span>
+            <div class="r-main"><h4>Prata</h4><small>Ao alcançar 15.000 pontos</small></div>
+            <div class="r-prize"><small>Prêmio</small><b>Relógio</b></div>
+          </div>
+          <div class="rung you">
+            <span class="you-tag">Você está aqui</span>
+            <span class="r-node" style="color:#fbbf24"></span>
+            <div class="r-main"><h4>Ouro</h4><small>Faltam 8.600 pontos</small></div>
+            <div class="r-prize"><small>Prêmio</small><b>Celular</b></div>
+          </div>
+          <div class="rung">
+            <span class="r-node" style="color:#22d3ee"></span>
+            <div class="r-main"><h4>Diamante</h4><small>Ao alcançar 100.000 pontos</small></div>
+            <div class="r-prize"><small>Prêmio</small><b>Notebook</b></div>
+          </div>
+          <div class="rung">
+            <span class="r-node" style="color:#f472b6"></span>
+            <div class="r-main"><h4>Lenda</h4><small>Ao alcançar 250.000 pontos</small></div>
+            <div class="r-prize"><small>Prêmio</small><b>Viagem</b></div>
+          </div>
+        </div>
+        <div class="wallet-float"><svg class="ic"><use href="#i-gift"/></svg> Prêmios cumulativos: cada nível conquistado é seu.</div>
+      </div>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — níveis e prêmios</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Níveis e prêmios" placeholder="Quais tipos de prêmio a banca pretende oferecer? Quantos níveis? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- METAS -->
+<section class="section tint" id="metas">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Meta diária + sequência</span>
+        <h2 style="font-size:clamp(28px,3.4vw,40px)">O hábito que vira bônus.</h2>
+        <p class="lead">A meta diária é o compromisso do dia. A sequência é a prova de constância. Juntas, elas criam um ritmo de vendas mais saudável — e uma recompensa que o vendedor sente na carteira.</p>
+        <ul class="bullets">
+          <li><svg class="ic"><use href="#i-check"/></svg><span>A banca define a meta diária de cada vendedor (valor fixo ou calculado com base no histórico).</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Bateu a meta do dia, a sequência avança. Passou um dia sem bater, a sequência recomeça.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Ao completar 7, 15 ou 30 dias consecutivos, o bônus cai direto na carteira.</span></li>
+        </ul>
+        <div class="wallet-float"><svg class="ic"><use href="#i-wallet"/></svg> Bônus creditado na carteira do vendedor</div>
+        <div class="note"><svg class="ic"><use href="#i-info"/></svg><span>Valores e marcos são definidos pela banca. Os números ao lado são apenas um exemplo.</span></div>
+      </div>
+      <div class="calendar-card reveal">
+        <div class="cal-head">
+          <h4>Sua sequência</h4>
+          <span>Exemplo: 7 dias consecutivos</span>
+        </div>
+        <div class="cal-grid" aria-label="Exemplo de sequência de 7 dias">
+          <div class="cal-day on">1<svg class="ic"><use href="#i-check"/></svg></div>
+          <div class="cal-day on">2<svg class="ic"><use href="#i-check"/></svg></div>
+          <div class="cal-day on">3<svg class="ic"><use href="#i-check"/></svg></div>
+          <div class="cal-day on">4<svg class="ic"><use href="#i-check"/></svg></div>
+          <div class="cal-day on">5<svg class="ic"><use href="#i-check"/></svg></div>
+          <div class="cal-day on">6<svg class="ic"><use href="#i-check"/></svg></div>
+          <div class="cal-day on today">7<svg class="ic"><use href="#i-check"/></svg></div>
+        </div>
+        <div class="milestones">
+          <div class="milestone">
+            <span class="m-days">07</span>
+            <div><b>7 dias consecutivos</b><small>Recompensa única</small></div>
+            <span class="m-value">R$ 100</span>
+          </div>
+          <div class="milestone">
+            <span class="m-days" style="background:#e0f2fe;color:#0369a1">15</span>
+            <div><b>15 dias consecutivos</b><small>Recompensa única</small></div>
+            <span class="m-value">R$ 200</span>
+          </div>
+          <div class="milestone">
+            <span class="m-days" style="background:#ffe4e6;color:#9f1239">30</span>
+            <div><b>30 dias consecutivos</b><small>Repete a cada 30 dias</small></div>
+            <span class="m-value">R$ 500</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — metas e sequência</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Metas diárias e sequência" placeholder="Qual meta diária e quais marcos fariam sentido para a sua banca? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- RANKING -->
+<section class="section" id="ranking">
+  <div class="container">
+    <div class="split">
+      <div class="rank-visual reveal" aria-label="Ilustração de pódio do ranking">
+        <div class="podium">
+          <div class="pod-card pod-2">
+            <div class="pod-pos" style="color:#38bdf8">2º lugar</div>
+            <div class="pod-avatar">M</div>
+            <b>Marcos</b>
+            <small>Bateu às 09:12</small>
+          </div>
+          <div class="pod-card pod-1">
+            <div class="pod-pos" style="color:#fbbf24">1º lugar</div>
+            <div class="pod-avatar">A</div>
+            <b>Ana Paula</b>
+            <small>Bateu às 08:40</small>
+          </div>
+          <div class="pod-card pod-3">
+            <div class="pod-pos" style="color:#fb923c">3º lugar</div>
+            <div class="pod-avatar">J</div>
+            <b>João</b>
+            <small>Bateu às 10:05</small>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:18px;color:#94a3b8;font-size:11.5px">Exemplo de pódio diário · nomes fictícios</div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Ranking</span>
+        <h2 style="font-size:clamp(28px,3.4vw,40px)">Reconhecimento no dia a dia.</h2>
+        <p class="lead">Todos os dias o ranking recomeça. Isso dá a todos a chance de aparecer — e cria um motivo novo para vender hoje.</p>
+        <div class="rank-cats">
+          <div class="rank-cat">
+            <span class="rc-icon"><svg class="ic"><use href="#i-chart"/></svg></span>
+            <div><b>Maior volume de vendas</b><small>Quem mais vendeu no dia.</small></div>
+          </div>
+          <div class="rank-cat">
+            <span class="rc-icon blue"><svg class="ic"><use href="#i-bolt"/></svg></span>
+            <div><b>Bateu a meta primeiro</b><small>Quem atingiu a meta mais cedo.</small></div>
+          </div>
+          <div class="rank-cat">
+            <span class="rc-icon red"><svg class="ic"><use href="#i-flame"/></svg></span>
+            <div><b>Maior sequência</b><small>Quem mantém a constância por mais dias.</small></div>
+          </div>
+        </div>
+        <ul class="bullets">
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Top 5 no pódio, com card oficial para compartilhar nas redes.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Privacidade: o ranking mostra nome e posição, nunca os valores vendidos pelos colegas.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>A banca escolhe se ativa o ranking e quem participa.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — ranking</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Ranking" placeholder="O ranking deve ser da banca, da rede ou geral? Faz sentido para o seu negócio? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- COMO SERIA NO LOTOBANCA -->
+<section class="section tint" id="lotobanca">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como seria no lotobanca</span>
+      <h2>Um plano para o vendedor. Um painel para a banca.</h2>
+      <p class="lead">Tudo dentro do painel que a banca já usa. O vendedor acompanha a jornada; a banca cria as regras, acompanha os resultados e controla o que será entregue.</p>
+    </div>
+
+    <div class="personas">
+      <article class="persona seller reveal">
+        <span class="chip p-tag"><svg class="ic" style="width:15px;height:15px"><use href="#i-users"/></svg> O que o vendedor vê</span>
+        <h3>A jornada dele, sempre à mão.</h3>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>O plano da sua banca e o próximo prêmio.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Os pontos acumulados e o quanto falta para subir de nível.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>A meta do dia, a sequência e o histórico.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>O extrato de pontos, venda por venda.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>O ranking e os cards de conquista para compartilhar.</span></li>
+        </ul>
+      </article>
+      <article class="persona banca reveal">
+        <span class="chip green p-tag"><svg class="ic" style="width:15px;height:15px"><use href="#i-sliders"/></svg> O que a banca controla</span>
+        <h3>As regras, o orçamento e a entrega.</h3>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Cria e publica o plano da banca: nome, níveis, pontos e prêmios.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Define a meta diária e os valores dos bônus de sequência.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Acompanha quem está perto de conquistar e quem se destacou.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Controla as entregas dos prêmios e o orçamento do programa.</span></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><span>Vê relatórios de engajamento e resultados da equipe.</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="screens">
+      <div class="phone reveal">
+        <div class="phone-screen career">
+          <div class="ps-top"><span>Minha jornada</span><span>Plano da banca</span></div>
+          <div class="ps-title">Sua próxima conquista</div>
+          <div class="ps-sub">Celular no nível Ouro</div>
+          <div class="ps-points">31.400 <span>pts</span></div>
+          <div class="ps-bar"><i style="width:78%"></i></div>
+          <div class="ps-line"><span>Faltam <b>8.600 pts</b></span><b>78%</b></div>
+          <div class="ps-levels">
+            <div class="ps-level"><i style="background:#a78bfa"></i> Bronze <em>R$ 100</em></div>
+            <div class="ps-level"><i style="background:#38bdf8"></i> Prata <em>Relógio</em></div>
+            <div class="ps-level"><i style="background:#fbbf24"></i> Ouro <em>Celular</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone reveal">
+        <div class="phone-screen meta">
+          <div class="ps-top"><span>Minhas metas</span><span>Hoje</span></div>
+          <div class="ps-flame">
+            <span class="f-circle"><svg class="ic"><use href="#i-flame"/></svg></span>
+            <div><b>7 dias</b><small>de sequência</small></div>
+          </div>
+          <div class="ps-goal">
+            <div class="g-top"><span>Meta de hoje</span><b>62%</b></div>
+            <div class="ps-bar"><i style="width:62%"></i></div>
+            <div class="ps-line"><span>R$ 186 de R$ 300</span><span>Faltam R$ 114</span></div>
+          </div>
+          <div class="ps-rewards">
+            <div class="ps-reward on"><b>7</b><small>R$ 100</small></div>
+            <div class="ps-reward"><b>15</b><small>R$ 200</small></div>
+            <div class="ps-reward"><b>30</b><small>R$ 500</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone reveal">
+        <div class="phone-screen rank">
+          <div class="ps-top"><span>Ranking de hoje</span><span>Ao vivo</span></div>
+          <div class="ps-tabs">
+            <span class="ps-tab on">Volume</span>
+            <span class="ps-tab">Meta</span>
+            <span class="ps-tab">Sequência</span>
+          </div>
+          <div class="ps-podium">
+            <div class="ps-pod second"><b>2º</b>Marcos</div>
+            <div class="ps-pod first"><b>1º</b>Ana</div>
+            <div class="ps-pod third"><b>3º</b>João</div>
+          </div>
+          <div class="ps-line" style="margin-top:12px"><span>Sua posição</span><b>#8 de 95</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-mock reveal">
+      <div class="pm-top">
+        <span class="pm-dot"></span>
+        <b>Painel da banca</b>
+        <span>Plano ativo: Plano Crescimento</span>
+        <span class="chip green">Publicado</span>
+      </div>
+      <div class="pm-grid">
+        <div class="pm-stat"><small>Vendedores no plano</small><b>24</b></div>
+        <div class="pm-stat"><small>Pontos no mês</small><b class="purple">186.400</b></div>
+        <div class="pm-stat"><small>Metas batidas hoje</small><b class="green">17 de 24</b></div>
+        <div class="pm-stat"><small>Prêmios a entregar</small><b class="gold">3</b></div>
+      </div>
+      <div class="pm-levels">
+        <div class="pm-level"><i style="background:#a78bfa"></i><b>Bronze</b><span>5.000 pts</span><em>R$ 100</em></div>
+        <div class="pm-level"><i style="background:#38bdf8"></i><b>Prata</b><span>15.000 pts</span><em>Relógio</em></div>
+        <div class="pm-level"><i style="background:#fbbf24"></i><b>Ouro</b><span>40.000 pts</span><em>Celular</em></div>
+        <div class="pm-level"><i style="background:#22d3ee"></i><b>Diamante</b><span>100.000 pts</span><em>Notebook</em></div>
+      </div>
+    </div>
+
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — experiência do vendedor e da banca</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Experiência do vendedor e da banca" placeholder="Alguma informação ou ação deveria aparecer para o vendedor ou para a banca? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONALIZAÇÃO -->
+<section class="section" id="personalizacao">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">O grande diferencial</span>
+      <h2>Cada banca com o seu próprio plano.</h2>
+      <p class="lead">Não existe um plano único. A banca é dona do programa: escolhe o nome, os níveis, os prêmios, as metas e os valores. A plataforma cuida dos cálculos, do acompanhamento e da experiência do vendedor.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan-card reveal">
+        <div class="plan-head">
+          <div>
+            <h3>Plano Turbo</h3>
+            <p class="plan-desc">Para bancas que querem acelerar o volume.</p>
+          </div>
+          <span class="plan-tag purple">Foco em volume</span>
+        </div>
+        <div class="plan-rows">
+          <div class="plan-row"><i style="background:#a78bfa"></i><b>Nível 1</b><span>3.000 pts</span><strong>R$ 150</strong></div>
+          <div class="plan-row"><i style="background:#38bdf8"></i><b>Nível 2</b><span>10.000 pts</span><strong>Celular</strong></div>
+          <div class="plan-row"><i style="background:#fbbf24"></i><b>Nível 3</b><span>30.000 pts</span><strong>Notebook</strong></div>
+          <div class="plan-row"><i style="background:#22d3ee"></i><b>Nível 4</b><span>80.000 pts</span><strong>Viagem</strong></div>
+        </div>
+        <div class="plan-foot">
+          <span class="chip neutral">Meta diária: R$ 500</span>
+          <span class="chip gold">Sequência 7d: R$ 150</span>
+          <span class="chip gold">Sequência 30d: R$ 800</span>
+        </div>
+      </article>
+
+      <article class="plan-card constancia reveal">
+        <div class="plan-head">
+          <div>
+            <h3>Plano Constância</h3>
+            <p class="plan-desc">Para bancas que querem frequência e recorrência.</p>
+          </div>
+          <span class="plan-tag green">Foco em constância</span>
+        </div>
+        <div class="plan-rows">
+          <div class="plan-row"><i style="background:#a78bfa"></i><b>Nível 1</b><span>2.000 pts</span><strong>R$ 50</strong></div>
+          <div class="plan-row"><i style="background:#38bdf8"></i><b>Nível 2</b><span>8.000 pts</span><strong>Relógio</strong></div>
+          <div class="plan-row"><i style="background:#fbbf24"></i><b>Nível 3</b><span>25.000 pts</span><strong>Celular</strong></div>
+          <div class="plan-row"><i style="background:#22d3ee"></i><b>Nível 4</b><span>70.000 pts</span><strong>Viagem</strong></div>
+        </div>
+        <div class="plan-foot">
+          <span class="chip neutral">Meta diária: R$ 150</span>
+          <span class="chip green">Sequência 7d: R$ 100</span>
+          <span class="chip green">Sequência 30d: R$ 700</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="setup">
+      <div class="step reveal">
+        <span class="s-num">1</span>
+        <h4>Escolha um modelo</h4>
+        <p>Comece de um plano pronto ou crie o seu do zero.</p>
+      </div>
+      <div class="step reveal">
+        <span class="s-num">2</span>
+        <h4>Defina níveis e prêmios</h4>
+        <p>Nomes, pontos necessários, prêmios e valores.</p>
+      </div>
+      <div class="step reveal">
+        <span class="s-num">3</span>
+        <h4>Defina metas e bônus</h4>
+        <p>Meta diária e recompensas de sequência.</p>
+      </div>
+      <div class="step reveal">
+        <span class="s-num">4</span>
+        <h4>Publique para a equipe</h4>
+        <p>O vendedor passa a ver o plano e a acompanhar sua jornada.</p>
+      </div>
+    </div>
+
+    <div class="note" style="justify-content:center;text-align:left;max-width:900px;margin:24px auto 0">
+      <svg class="ic"><use href="#i-info"/></svg>
+      <span>A banca pode ter mais de um plano ao mesmo tempo: por equipe, por temporada ou por campanha. O orçamento é dela — a plataforma organiza e mostra o que já foi conquistado.</span>
+    </div>
+
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — plano personalizado por banca</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Plano personalizado por banca" placeholder="A banca deve ter liberdade total para definir o plano? Quer limites ou modelos obrigatórios? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- JORNADA -->
+<section class="section tint" id="jornada">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">A jornada completa</span>
+      <h2>Do primeiro acesso ao prêmio na mão.</h2>
+      <p class="lead">Em poucos passos, o vendedor entende o programa e começa a perseguir a próxima conquista.</p>
+    </div>
+    <div class="journey">
+      <div class="jstep reveal"><b>Conhece o plano</b><p>Vê os níveis, os prêmios e a meta da sua banca.</p></div>
+      <div class="jstep reveal"><b>Faz uma venda</b><p>Os pontos entram automaticamente no painel.</p></div>
+      <div class="jstep reveal"><b>Acompanha o próximo prêmio</b><p>Sabe exatamente quanto falta para conquistar.</p></div>
+      <div class="jstep reveal"><b>Bate a meta do dia</b><p>Mantém a sequência e avança rumo ao bônus.</p></div>
+      <div class="jstep reveal"><b>Sobe de nível</b><p>Recebe o prêmio daquele nível, com acompanhamento de entrega.</p></div>
+      <div class="jstep reveal"><b>Se destaca</b><p>Aparece no ranking e compartilha o card de conquista.</p></div>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — jornada do vendedor</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Jornada do vendedor" placeholder="Falta algum passo na jornada? Alguma etapa deveria ser diferente? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- REGRAS -->
+<section class="section" id="regras">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Combinados claros</span>
+      <h2>Regras transparentes para os dois lados.</h2>
+      <p class="lead">Um programa só funciona quando todo mundo entende as regras. Elas ficam visíveis para a banca e para o vendedor.</p>
+    </div>
+    <div class="rules">
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>A regra de pontos é da banca</b><p>O padrão sugerido é R$ 1 vendido = 1 ponto. A banca pode definir outro critério.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>Só vendas confirmadas pontuam</b><p>O que não foi efetivado não gera pontos.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>Pontos não expiram durante o plano</b><p>A jornada do vendedor é preservada enquanto o plano estiver ativo.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>Prêmios são cumulativos</b><p>Cada nível conquistado garante o seu prêmio, sem substituir os anteriores.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>A sequência reinicia ao perder um dia</b><p>É o que dá valor à constância. O vendedor sempre vê o status da sequência.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>Bônus vão para a carteira</b><p>As recompensas de sequência são creditadas direto na carteira do vendedor.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>O ranking recomeça todo dia</b><p>Todos têm uma nova chance de aparecer.</p></div></div>
+      <div class="rule reveal"><span class="r-ic"><svg class="ic"><use href="#i-check"/></svg></span><div><b>O vendedor vê quanto falta</b><p>Nada de surpresa: o painel mostra pontos, próximo prêmio e progresso.</p></div></div>
+    </div>
+    <div class="obs reveal">
+      <div class="obs-head"><svg class="ic"><use href="#i-chat"/></svg><span style="margin-left:0">Observação desta área — regras do programa</span><span>Opcional · salvo neste navegador</span></div>
+      <textarea class="obs-input" data-area="Regras do programa" placeholder="Alguma regra precisa ser diferente para o seu negócio? Deixe sua observação."></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- VALIDAÇÃO -->
+<section class="section tint" id="validacao">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Sua avaliação</span>
+      <h2>O que precisamos validar com você.</h2>
+      <p class="lead">Marque os pontos que fazem sentido para o lotobanca. No final, você pode copiar as suas respostas — incluindo as observações de cada área — e enviar para a nossa equipe.</p>
+    </div>
+
+    <div class="validation-card reveal">
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="Cada banca deve poder criar o seu próprio plano de carreira">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>Cada banca deve poder criar o seu próprio plano de carreira</b><small>Com níveis, prêmios e valores definidos pela própria banca.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="Os prêmios devem ser definidos pela banca (dinheiro, produtos e viagens)">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>Os prêmios devem ser definidos pela banca</b><small>Dinheiro na carteira, produtos físicos e viagens, conforme o orçamento da banca.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="A regra padrão de R$ 1 vendido = 1 ponto faz sentido">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>A regra padrão de R$ 1 vendido = 1 ponto faz sentido</b><small>E a banca pode ajustar essa regra se quiser.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="Queremos metas diárias com recompensa por sequência">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>Queremos metas diárias com recompensa por sequência</b><small>Bônus na carteira ao completar 7, 15 e 30 dias consecutivos (valores a definir).</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="Queremos um ranking entre vendedores">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>Queremos um ranking entre vendedores</b><small>Com pódio diário e card de conquista. Pode ser da própria banca ou da rede.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="A banca deve controlar o orçamento dos prêmios">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>A banca deve controlar o orçamento dos prêmios</b><small>A plataforma organiza os cálculos e as entregas, mas o investimento é decidido pela banca.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="Queremos modelos prontos de plano para facilitar o lançamento">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>Queremos modelos prontos de plano para facilitar o lançamento</b><small>A banca escolhe um modelo e ajusta os detalhes.</small></span>
+      </label>
+      <label class="check">
+        <input type="checkbox" class="v-check" data-q="Devemos permitir mais de um plano por banca (por equipe ou temporada)">
+        <span class="box"><svg class="ic"><use href="#i-check"/></svg></span>
+        <span class="c-text"><b>Devemos permitir mais de um plano por banca</b><small>Por equipe, por campanha ou por temporada.</small></span>
+      </label>
+
+      <div class="comments-block">
+        <label for="v-comments">Observações gerais (opcional)</label>
+        <textarea id="v-comments" class="obs-input" data-area="Observações gerais" placeholder="Escreva aqui ajustes, dúvidas ou ideias que quiser acrescentar..."></textarea>
+      </div>
+
+      <div class="copy-row">
+        <button class="btn btn-primary" id="copy-btn" type="button"><svg class="ic"><use href="#i-copy"/></svg> Copiar minhas respostas</button>
+        <span class="copy-status" id="copy-status"><svg class="ic"><use href="#i-check"/></svg> Respostas copiadas!</span>
+        <button class="btn btn-light" type="button" onclick="window.print()"><svg class="ic"><use href="#i-print"/></svg> Imprimir / salvar PDF</button>
+      </div>
+    </div>
+    <p class="validation-note">Não é necessário decidir tudo agora. O objetivo desta página é confirmar o conceito e os pontos mais importantes. As observações ficam salvas neste navegador até você copiá-las ou fechar a página.</p>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section class="section" id="proximos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Próximos passos</span>
+      <h2>Do conceito ao primeiro plano piloto.</h2>
+      <p class="lead">Se a proposta fizer sentido, o caminho é curto: validar, desenhar o primeiro plano e testar com um grupo de vendedores.</p>
+    </div>
+    <div class="next-grid">
+      <article class="next-card reveal">
+        <div class="n-big">01</div>
+        <h3>Validar o conceito</h3>
+        <p>Confirmar os pontos desta página: plano por banca, níveis, prêmios, metas e ranking.</p>
+      </article>
+      <article class="next-card reveal">
+        <div class="n-big">02</div>
+        <h3>Desenhar o plano piloto</h3>
+        <p>Definir os níveis, os prêmios, a meta diária e o orçamento da primeira banca.</p>
+      </article>
+      <article class="next-card reveal">
+        <div class="n-big">03</div>
+        <h3>Lançar e medir</h3>
+        <p>Colocar o plano no ar com um grupo de vendedores e acompanhar os resultados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="#top" class="brand" style="text-decoration:none">
+          <span class="brand-mark">L</span>
+          <span class="brand-name">lotobanca<small>Plano de Carreira</small></span>
+        </a>
+        <p>Uma proposta de programa de reconhecimento para vendedores: pontos, níveis, prêmios, metas diárias e ranking — com cada banca no controle do seu próprio plano.</p>
+      </div>
+      <div class="footer-right">
+        <b>Documento para avaliação</b>
+        Proposta de produto · 2026<br>
+        Valores e regras ilustrativos
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 lotobanca. Todos os direitos reservados.</span>
+      <span>Página preparada para conversa e validação do conceito.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><svg class="ic"><use href="#i-check"/></svg><span id="toast-text">Respostas copiadas!</span></div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- Nav shadow ----------
+  var nav = document.getElementById('nav');
+  function onScroll(){
+    if (window.scrollY > 12) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---------- Reveal on scroll ----------
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+    reveals.forEach(function(el, i){
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 70) + 'ms';
+      io.observe(el);
+    });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // ---------- Simulador ----------
+  var levels = [
+    {name:'Bronze', pts:5000},
+    {name:'Prata', pts:15000},
+    {name:'Ouro', pts:40000},
+    {name:'Diamante', pts:100000},
+    {name:'Lenda', pts:250000}
+  ];
+  var input = document.getElementById('sim-sales');
+  var out = document.getElementById('sim-sales-out');
+  var pointsEl = document.getElementById('sim-points');
+  var levelEl = document.getElementById('sim-level');
+  var nextEl = document.getElementById('sim-next');
+  var fmt = new Intl.NumberFormat('pt-BR');
+
+  function renderSim(){
+    var sales = Number(input.value) || 0;
+    var points = sales; // 1 real = 1 ponto
+    out.textContent = 'R$ ' + fmt.format(sales);
+    pointsEl.textContent = fmt.format(points);
+
+    var reached = null;
+    var next = null;
+    for (var i = 0; i < levels.length; i++) {
+      if (points >= levels[i].pts) reached = levels[i];
+      else { next = levels[i]; break; }
+    }
+    levelEl.textContent = reached ? reached.name : 'Iniciante';
+    if (next) {
+      nextEl.textContent = next.name + ' · faltam ' + fmt.format(next.pts - points) + ' pts';
+    } else {
+      nextEl.textContent = 'Nível máximo alcançado';
+    }
+  }
+  if (input) {
+    input.addEventListener('input', renderSim);
+    renderSim();
+  }
+
+  // ---------- Persistência das observações e checklist ----------
+  var STORAGE_KEY = 'lbpc-avaliacao-v1';
+  var obsFields = Array.prototype.slice.call(document.querySelectorAll('.obs-input'));
+  var checks = Array.prototype.slice.call(document.querySelectorAll('.v-check'));
+  var saveTimer = null;
+
+  function readState(){
+    try {
+      var raw = window.localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {obs:{}, checks:{}};
+    } catch(e) {
+      return {obs:{}, checks:{}};
+    }
+  }
+
+  function writeState(){
+    var state = {obs:{}, checks:{}};
+    obsFields.forEach(function(f){ state.obs[f.getAttribute('data-area')] = f.value; });
+    checks.forEach(function(c){ state.checks[c.getAttribute('data-q')] = !!c.checked; });
+    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+  }
+
+  function markSaved(field){
+    var box = field.closest ? field.closest('.obs') : null;
+    if (!box) return;
+    box.classList.add('saved');
+    clearTimeout(box._savedTimer);
+    box._savedTimer = setTimeout(function(){ box.classList.remove('saved'); }, 1800);
+  }
+
+  function scheduleSave(field){
+    writeState();
+    if (field) markSaved(field);
+  }
+
+  // Restaurar
+  var state = readState();
+  obsFields.forEach(function(f){
+    var key = f.getAttribute('data-area');
+    if (state.obs && typeof state.obs[key] === 'string') f.value = state.obs[key];
+  });
+  checks.forEach(function(c){
+    var key = c.getAttribute('data-q');
+    if (state.checks && state.checks[key]) c.checked = true;
+  });
+
+  // Salvar
+  obsFields.forEach(function(f){
+    f.addEventListener('input', function(){
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(function(){ scheduleSave(f); }, 350);
+    });
+    f.addEventListener('blur', function(){ scheduleSave(f); });
+  });
+  checks.forEach(function(c){
+    c.addEventListener('change', function(){ writeState(); });
+  });
+
+  // ---------- Checklist copy ----------
+  var copyBtn = document.getElementById('copy-btn');
+  var copyStatus = document.getElementById('copy-status');
+  var toast = document.getElementById('toast');
+  var toastText = document.getElementById('toast-text');
+
+  function showToast(msg){
+    toastText.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function(){ toast.classList.remove('show'); }, 2800);
+  }
+
+  function buildSummary(){
+    var yes = [];
+    var no = [];
+    checks.forEach(function(c){
+      (c.checked ? yes : no).push(c.getAttribute('data-q'));
+    });
+    var lines = [];
+    lines.push('Avaliação da proposta — Plano de Carreira lotobanca');
+    lines.push('Data: ' + new Date().toLocaleDateString('pt-BR'));
+    lines.push('');
+    lines.push('PONTOS QUE FAZEM SENTIDO (' + yes.length + '):');
+    if (yes.length) yes.forEach(function(q){ lines.push('✓ ' + q); });
+    else lines.push('(nenhum marcado)');
+    lines.push('');
+    lines.push('PONTOS PARA AJUSTAR OU AVALIAR (' + no.length + '):');
+    if (no.length) no.forEach(function(q){ lines.push('• ' + q); });
+    else lines.push('(nenhum)');
+
+    var obsWithText = obsFields.filter(function(f){ return f.value.trim(); });
+    if (obsWithText.length) {
+      lines.push('');
+      lines.push('OBSERVAÇÕES POR ÁREA:');
+      obsWithText.forEach(function(f){
+        lines.push('');
+        lines.push('[' + f.getAttribute('data-area') + ']');
+        lines.push(f.value.trim());
+      });
+    }
+    return lines.join('\n');
+  }
+
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
+  }
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function(){
+      writeState();
+      var text = buildSummary();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          copyStatus.classList.add('show');
+          showToast('Respostas e observações copiadas! Agora é só colar e enviar.');
+          setTimeout(function(){ copyStatus.classList.remove('show'); }, 3200);
+        }).catch(function(){
+          fallbackCopy(text);
+          showToast('Respostas e observações copiadas!');
+        });
+      } else {
+        fallbackCopy(text);
+        showToast('Respostas e observações copiadas!');
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
